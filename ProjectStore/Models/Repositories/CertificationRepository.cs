@@ -9,6 +9,7 @@ namespace ProjectStore.Models.Repositories
     public class CertificationRepository : ICertificationRepository
     {
         readonly CertificationContext context;
+
         public CertificationRepository(CertificationContext context)
         {
             this.context = context;
@@ -29,16 +30,12 @@ namespace ProjectStore.Models.Repositories
             }
         }
 
-        public void Edit(Certification c)
+        public Certification Edit(Certification certificationChanges)
         {
-            Certification oldCertification = context.Certifications.Find(c.CertificationId);
-            if (oldCertification != null)
-            {
-                oldCertification.CertificationName = c.CertificationName;
-                oldCertification.Description = c.Description;
-                oldCertification.CategorieId = c.CategorieId;
-                context.SaveChanges();
-            }
+            var certification = context.Certifications.Attach(certificationChanges);
+            certification.State = EntityState.Modified;
+            context.SaveChanges();
+            return certificationChanges;
         }
 
         public IList<Certification> FindByName(string name)

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectStore.Models;
 
 namespace ProjectStore.Migrations
 {
     [DbContext(typeof(CertificationContext))]
-    partial class CertificationContextModelSnapshot : ModelSnapshot
+    [Migration("20201217001229_third_create")]
+    partial class third_create
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace ProjectStore.Migrations
                     b.Property<string>("PhotoPath")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Price")
+                    b.Property<int>("Prix")
                         .HasColumnType("int");
 
                     b.HasKey("CertificationId");

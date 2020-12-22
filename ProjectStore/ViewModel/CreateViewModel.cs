@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using ProjectStore.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectStore.Models
+namespace ProjectStore.ViewModel
 {
-    public class Certification
+    public class CreateViewModel
     {
         public int CertificationId { get; set; }
 
@@ -15,12 +17,14 @@ namespace ProjectStore.Models
 
         [Required]
         public string Description { get; set; }
+
         public int Price { get; set; }
 
-        public string PhotoPath { get; set; }
-
+        public IFormFile Photo { get; set; }
         public int CategorieId { get; set; }
 
         public Categorie Categorie { get; set; }
+
+
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\source\\repos\\ProjectStore\\ProjectStore\\ProjectStore.csproj": {}
+    "D:\\doc 3eme\\.NET\\project.Net\\MookProject_dotNet\\ProjectStore\\ProjectStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\source\\repos\\ProjectStore\\ProjectStore\\ProjectStore.csproj": {
+    "D:\\doc 3eme\\.NET\\project.Net\\MookProject_dotNet\\ProjectStore\\ProjectStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\ProjectStore\\ProjectStore\\ProjectStore.csproj",
+        "projectUniqueName": "D:\\doc 3eme\\.NET\\project.Net\\MookProject_dotNet\\ProjectStore\\ProjectStore.csproj",
         "projectName": "ProjectStore",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\ProjectStore\\ProjectStore\\ProjectStore.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\ProjectStore\\ProjectStore\\obj\\",
+        "projectPath": "D:\\doc 3eme\\.NET\\project.Net\\MookProject_dotNet\\ProjectStore\\ProjectStore.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\doc 3eme\\.NET\\project.Net\\MookProject_dotNet\\ProjectStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -77,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

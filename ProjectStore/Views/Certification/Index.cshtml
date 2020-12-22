@@ -1,47 +1,36 @@
 ﻿@model IEnumerable<ProjectStore.Models.Certification>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Certificat List";
 }
 
-<h1>Index</h1>
+<h1>Certificat List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CertificationName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categorie)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CertificationName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categorie.CategorieId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CertificationId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CertificationId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CertificationId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="card-deck">
+    @foreach (var certification in Model)
+    {
+        var photoPath = "~/images/" + (certification.PhotoPath ?? "noimage.jpg");
+        <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+            <div class="card-header">
+                <h5><b>Name : </b> @certification.CertificationName</h5>
+                <h5><b>Description :</b>@certification.Description</h5>
+                <h5><b>Price :</b> @certification.Price</h5>
+                <h5><b>Categorie :</b> @certification.Categorie.CategorieName</h5>
+            </div>
+
+            <img class="card-img-top imageThumbnail" src="@photoPath"
+                 asp-append-version="true" />
+
+            <div class="card-footer text-center">
+                <a asp-controller="Certification" asp-action="Details" asp-route-id="@certification.CertificationId"
+                   class="btn btn-primary m-1">View</a>
+                <a asp-action="Edit" asp-controller="Certification" class="btn btn-primary m-1" asp-route-id="@certification.CertificationId">Edit</a>
+                <a asp-action="Delete" asp-controller="Certification" class="btn btn-danger m-1" asp-route-id="@certification.CertificationId">Delete</a>
+            </div>
+        </div>
+    }
+</div>
